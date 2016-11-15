@@ -5,10 +5,33 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Player">
+      <sprite>sprites\spr_player_idle</sprite>
+    </sprites>
+    <sprites name="PlaceholderSprites">
+      <sprite>sprites\spr_square</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <rooms name="rooms"/>
+  <scripts name="scripts">
+    <scripts name="Helpers">
+      <script>scripts\move_to.gml</script>
+    </scripts>
+  </scripts>
+  <objects name="objects">
+    <objects name="GameState">
+      <object>objects\GameState</object>
+      <object>objects\ViewFollow</object>
+    </objects>
+    <objects name="Player">
+      <object>objects\obj_player</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_map_dev</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
