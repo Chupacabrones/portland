@@ -14,5 +14,4 @@ vx = lengthdir_x(len, dir);
 vy = lengthdir_y(len, dir);
 
 // move 
-x += vx;
-y += vy;
+move(base_collision);
