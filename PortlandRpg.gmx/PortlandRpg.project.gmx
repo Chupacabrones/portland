@@ -34,6 +34,11 @@
     <scripts name="Model">
       <script>scripts\game_models.gml</script>
     </scripts>
+    <scripts name="Game">
+      <scripts name="states">
+        <script>scripts\st_game_title.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="GameState">
@@ -49,8 +54,12 @@
     <objects name="BaseObjects">
       <object>objects\base_collision</object>
     </objects>
+    <objects name="Menus">
+      <object>objects\obj_title_menu</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_title</room>
     <room>rooms\rm_map_dev</room>
   </rooms>
   <help>
