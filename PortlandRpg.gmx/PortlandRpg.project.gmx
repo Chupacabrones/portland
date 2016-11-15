@@ -11,6 +11,7 @@
     </sprites>
     <sprites name="PlaceholderSprites">
       <sprite>sprites\spr_square</sprite>
+      <sprite>sprites\spr_wall</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -18,6 +19,18 @@
   <scripts name="scripts">
     <scripts name="Helpers">
       <script>scripts\move_to.gml</script>
+      <script>scripts\game_input.gml</script>
+    </scripts>
+    <scripts name="StateMachine">
+      <script>scripts\state_init.gml</script>
+      <script>scripts\state_switch.gml</script>
+      <script>scripts\state_process.gml</script>
+    </scripts>
+    <scripts name="Player">
+      <script>scripts\st_player_moving.gml</script>
+    </scripts>
+    <scripts name="Model">
+      <script>scripts\game_models.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -27,6 +40,9 @@
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
+    </objects>
+    <objects name="Map">
+      <object>objects\obj_wall</object>
     </objects>
   </objects>
   <rooms name="rooms">
