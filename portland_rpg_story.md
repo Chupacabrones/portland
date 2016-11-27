@@ -54,7 +54,6 @@ there's a dark breakfast underworld beneath the city, soon to be discovered by a
 - raed, the main character
     - race: human
     - age: 26
-    - 
 - askkii, the brother
     - race: human
     - age: 31
