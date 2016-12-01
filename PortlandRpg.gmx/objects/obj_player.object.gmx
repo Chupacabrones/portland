@@ -42,6 +42,132 @@ state_init(st_player_moving);
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///create sprites 
+surf = surface_create(1024, 512);
+surface_set_target(surf);
+draw_clear_alpha(c_black, 0);
+draw_sprite(spr_fatchar, 0, 0, 0);
+
+
+spr_idle = sprite_create_from_surface(surf
+    , 32, 0
+    , 32, 32
+    , false
+    , false
+    , 16, 16);
+    
+i = 0;
+yp = 0;
+while yp  &lt; 128 {
+    xp = 0;
+    frame = 0;
+    while xp &lt; 128 {
+    
+        //spr_down 
+        if yp == 0 {
+            if xp == 0 {
+                spr_down = sprite_create_from_surface(surf
+                    , xp, yp
+                    , 32, 32
+                    , false
+                    , false
+                    , 16, 16); 
+            } else {
+                frame ++;
+                sprite_add_from_surface(spr_down, surf
+                                        , xp, yp
+                                        , 32, 32
+                                        , false, false
+                                        );
+            }            
+        }
+    
+        //spr_left 
+        if yp == 32 {
+            if xp == 0 {
+                spr_left = sprite_create_from_surface(surf
+                    , xp, yp
+                    , 32, 32
+                    , false
+                    , false
+                    , 16, 16); 
+            } else {
+                frame ++;
+                sprite_add_from_surface(spr_left, surf
+                                        , xp, yp
+                                        , 32, 32
+                                        , false, false
+                                        );
+            }            
+        }
+    
+        //spr_right
+        if yp == 64 {
+            if xp == 0 {
+                spr_right = sprite_create_from_surface(surf
+                    , xp, yp
+                    , 32, 32
+                    , false
+                    , false
+                    , 16, 16); 
+            } else {
+                frame ++;
+                sprite_add_from_surface(spr_right, surf
+                                        , xp, yp
+                                        , 32, 32
+                                        , false, false
+                                        );
+            }            
+        }
+    
+        //spr_up
+        if yp == 96 {
+            if xp == 0 {
+                spr_up = sprite_create_from_surface(surf
+                    , xp, yp
+                    , 32, 32
+                    , false
+                    , false
+                    , 16, 16); 
+            } else {
+                frame ++;
+                sprite_add_from_surface(spr_up, surf
+                                        , xp, yp
+                                        , 32, 32
+                                        , false, false
+                                        );
+            }            
+        }          
+            
+        xp += 32;                
+        i ++; 
+    }
+    yp += 32;
+}
+
+surface_reset_target();
+surface_free(surf);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -88,6 +214,29 @@ state_process();
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///make it rain above player 
+effect_create_above(ef_rain,x,y-50,1,c_white);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -109,6 +258,7 @@ state_process();
             <string>/// draw self
 
 draw_self();
+
 </string>
           </argument>
         </arguments>

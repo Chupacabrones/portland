@@ -8,14 +8,18 @@
   <sprites name="sprites">
     <sprites name="Player">
       <sprite>sprites\spr_player_idle</sprite>
+      <sprite>sprites\spr_fatchar</sprite>
     </sprites>
     <sprites name="PlaceholderSprites">
       <sprite>sprites\spr_square</sprite>
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_collision</sprite>
     </sprites>
+    <sprite>sprites\spr_portland_nogo</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bkg_portland</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Helpers">
@@ -49,6 +53,7 @@
       <object>objects\obj_player</object>
     </objects>
     <objects name="Map">
+      <object>objects\obj_portland_nogo</object>
       <object>objects\obj_wall</object>
     </objects>
     <objects name="BaseObjects">
@@ -60,6 +65,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
+    <room>rooms\rm_map_dev2</room>
     <room>rooms\rm_map_dev</room>
   </rooms>
   <help>

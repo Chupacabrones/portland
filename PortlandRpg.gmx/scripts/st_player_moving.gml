@@ -14,4 +14,5 @@ vx = lengthdir_x(len, dir);
 vy = lengthdir_y(len, dir);
 
 // move 
-move(base_collision);
+//move(base_collision);
+move(obj_portland_nogo);
