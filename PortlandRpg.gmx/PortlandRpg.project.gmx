@@ -16,6 +16,19 @@
       <sprite>sprites\spr_collision</sprite>
     </sprites>
     <sprite>sprites\spr_portland_nogo</sprite>
+    <sprites name="Gui">
+      <sprites name="window">
+        <sprite>sprites\spr_window_TL</sprite>
+        <sprite>sprites\spr_window_TM</sprite>
+        <sprite>sprites\spr_window_TR</sprite>
+        <sprite>sprites\spr_window_ML</sprite>
+        <sprite>sprites\spr_window_MR</sprite>
+        <sprite>sprites\spr_window_BL</sprite>
+        <sprite>sprites\spr_window_BM</sprite>
+        <sprite>sprites\spr_window_BR</sprite>
+        <sprite>sprites\spr_window_bg</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_portland</background>
@@ -43,11 +56,21 @@
         <script>scripts\st_game_title.gml</script>
       </scripts>
     </scripts>
+    <scripts name="Gui">
+      <scripts name="window">
+        <script>scripts\st_window_transition.gml</script>
+        <script>scripts\scr_window_static.gml</script>
+        <script>scripts\scr_window_hidden.gml</script>
+        <script>scripts\gui_window_open.gml</script>
+        <script>scripts\gui_window_close.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="GameState">
       <object>objects\GameState</object>
       <object>objects\ViewFollow</object>
+      <object>objects\WindowTester</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
@@ -58,15 +81,17 @@
     </objects>
     <objects name="BaseObjects">
       <object>objects\base_collision</object>
+      <object>objects\base_window</object>
     </objects>
     <objects name="Menus">
       <object>objects\obj_title_menu</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_title</room>
     <room>rooms\rm_map_dev2</room>
     <room>rooms\rm_map_dev</room>
+    <room>rooms\rm_test</room>
+    <room>rooms\rm_title</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
