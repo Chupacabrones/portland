@@ -88,10 +88,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_title</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_map_dev2</room>
     <room>rooms\rm_map_dev</room>
-    <room>rooms\rm_title</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
