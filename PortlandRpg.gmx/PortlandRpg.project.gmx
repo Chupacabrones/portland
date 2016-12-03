@@ -15,7 +15,6 @@
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_collision</sprite>
     </sprites>
-    <sprite>sprites\spr_portland_nogo</sprite>
     <sprites name="Gui">
       <sprites name="window">
         <sprite>sprites\spr_window_TL</sprite>
@@ -28,6 +27,11 @@
         <sprite>sprites\spr_window_BR</sprite>
         <sprite>sprites\spr_window_bg</sprite>
       </sprites>
+    </sprites>
+    <sprites name="Map">
+      <sprite>sprites\spr_portland_nogo</sprite>
+      <sprite>sprites\spr_warp_entrance</sprite>
+      <sprite>sprites\spr_warp_exit</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -78,6 +82,10 @@
     <objects name="Map">
       <object>objects\obj_portland_nogo</object>
       <object>objects\obj_wall</object>
+      <objects name="Warp">
+        <object>objects\obj_warp_entrance</object>
+        <object>objects\obj_warp_exit</object>
+      </objects>
     </objects>
     <objects name="BaseObjects">
       <object>objects\base_collision</object>
@@ -88,10 +96,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_init_game</room>
     <room>rooms\rm_title</room>
-    <room>rooms\rm_test</room>
-    <room>rooms\rm_map_dev2</room>
     <room>rooms\rm_map_dev</room>
+    <room>rooms\rm_map_dev2</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
