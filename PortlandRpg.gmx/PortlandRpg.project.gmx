@@ -33,6 +33,12 @@
       <sprite>sprites\spr_warp_entrance</sprite>
       <sprite>sprites\spr_warp_exit</sprite>
     </sprites>
+    <sprites name="MiniGames">
+      <sprites name="Knitting">
+        <sprite>sprites\spr_knitting_yarn_placeholder</sprite>
+        <sprite>sprites\spr_knitting_needle_target</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_portland</background>
@@ -69,6 +75,13 @@
         <script>scripts\gui_window_close.gml</script>
       </scripts>
     </scripts>
+    <scripts name="MiniGames">
+      <scripts name="Knitting">
+        <script>scripts\st_knitting_needle_up.gml</script>
+        <script>scripts\st_knitting_needle_down.gml</script>
+        <script>scripts\st_knitting_game_over.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="GameState">
@@ -94,6 +107,12 @@
     <objects name="Menus">
       <object>objects\obj_title_menu</object>
     </objects>
+    <objects name="MiniGames">
+      <objects name="Knitting">
+        <object>objects\obj_knitting_needle</object>
+        <object>objects\obj_knitting_yarn</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init_game</room>
@@ -101,6 +120,9 @@
     <room>rooms\rm_map_dev</room>
     <room>rooms\rm_map_dev2</room>
     <room>rooms\rm_test</room>
+    <rooms name="MiniGames">
+      <room>rooms\rm_game_knitting</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
