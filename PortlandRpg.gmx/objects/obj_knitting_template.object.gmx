@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>obj_knitting_needle._knit_score += 1;
-
+other._on_template = true;
 instance_destroy();
 </string>
           </argument>

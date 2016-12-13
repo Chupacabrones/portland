@@ -9,6 +9,10 @@ input_action_released = keyboard_check_released(vk_enter);
 input_menu_pressed = keyboard_check_pressed(vk_escape);
 input_menu_released = keyboard_check_released(vk_escape);
 
+if (input_menu_pressed) {
+    game_end();
+}
+
 //detect game controller and override above inputs when connected
 var gp_id = 0;
 var thresh = 0.5; // amount need to cause movement in a direction

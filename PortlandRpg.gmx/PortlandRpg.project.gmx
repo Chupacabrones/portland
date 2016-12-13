@@ -48,6 +48,7 @@
     <paths name="MiniGames">
       <paths name="Knitting">
         <path>paths\pth_knitting_sweater</path>
+        <path>paths\pth_knitting_hat</path>
       </paths>
     </paths>
   </paths>
@@ -90,6 +91,10 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_game_over</font>
+    <font>fonts\fnt_game_normal</font>
+  </fonts>
   <objects name="objects">
     <objects name="GameState">
       <object>objects\GameState</object>

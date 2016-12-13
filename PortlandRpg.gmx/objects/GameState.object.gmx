@@ -32,7 +32,7 @@ game_models();
 
 // TODO: include game state switches
 
-
+draw_set_font(fnt_game_normal);
 last_room_visited = rm_title; //default value
 </string>
           </argument>
