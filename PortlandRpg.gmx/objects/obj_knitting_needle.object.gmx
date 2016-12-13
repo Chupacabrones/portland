@@ -36,11 +36,15 @@ _rows = _height / _size;
 _cols = _width / _size;
 _end_position = (_rows * _cols) - 1;
 
+// state
+_knit_score = 0;
 _current_position = 0;
 _current_row = 0;
 _current_col = 0;
 _move_timeout = _needle_speed;
-state_init(st_knitting_needle_up);
+
+_template_array = scr_knitting_get_template_points(pth_knitting_sweater);
+state_init(st_knitting_draw);
 </string>
           </argument>
         </arguments>
@@ -87,6 +91,31 @@ game_input();
             <kind>1</kind>
             <string>/// state_process()
 state_process();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw score
+
+draw_text(5, 5, "Score: " + string(_knit_score));
 </string>
           </argument>
         </arguments>

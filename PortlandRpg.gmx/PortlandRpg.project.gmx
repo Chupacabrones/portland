@@ -37,13 +37,20 @@
       <sprites name="Knitting">
         <sprite>sprites\spr_knitting_yarn_placeholder</sprite>
         <sprite>sprites\spr_knitting_needle_target</sprite>
+        <sprite>sprites\spr_knitting_template</sprite>
       </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_portland</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <paths name="MiniGames">
+      <paths name="Knitting">
+        <path>paths\pth_knitting_sweater</path>
+      </paths>
+    </paths>
+  </paths>
   <scripts name="scripts">
     <scripts name="Helpers">
       <script>scripts\move_to.gml</script>
@@ -77,9 +84,9 @@
     </scripts>
     <scripts name="MiniGames">
       <scripts name="Knitting">
-        <script>scripts\st_knitting_needle_up.gml</script>
-        <script>scripts\st_knitting_needle_down.gml</script>
+        <script>scripts\st_knitting_draw.gml</script>
         <script>scripts\st_knitting_game_over.gml</script>
+        <script>scripts\scr_knitting_get_template_points.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -111,6 +118,7 @@
       <objects name="Knitting">
         <object>objects\obj_knitting_needle</object>
         <object>objects\obj_knitting_yarn</object>
+        <object>objects\obj_knitting_template</object>
       </objects>
     </objects>
   </objects>

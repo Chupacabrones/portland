@@ -2,6 +2,10 @@
 
 if (state_time == 0) {
     _move_timeout = _needle_speed;
+    for (var i = 0; i < array_length_1d(_template_array); i ++) {
+        var point = _template_array[i];
+        instance_create(point[0], point[1], obj_knitting_template);
+    }
 }
 
 // move obj
