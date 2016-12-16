@@ -33,11 +33,25 @@
       <sprite>sprites\spr_warp_entrance</sprite>
       <sprite>sprites\spr_warp_exit</sprite>
     </sprites>
+    <sprites name="MiniGames">
+      <sprites name="Knitting">
+        <sprite>sprites\spr_knitting_yarn_placeholder</sprite>
+        <sprite>sprites\spr_knitting_needle_target</sprite>
+        <sprite>sprites\spr_knitting_template</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_portland</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <paths name="MiniGames">
+      <paths name="Knitting">
+        <path>paths\pth_knitting_sweater</path>
+        <path>paths\pth_knitting_hat</path>
+      </paths>
+    </paths>
+  </paths>
   <scripts name="scripts">
     <scripts name="Helpers">
       <script>scripts\move_to.gml</script>
@@ -69,7 +83,18 @@
         <script>scripts\gui_window_close.gml</script>
       </scripts>
     </scripts>
+    <scripts name="MiniGames">
+      <scripts name="Knitting">
+        <script>scripts\st_knitting_draw.gml</script>
+        <script>scripts\st_knitting_game_over.gml</script>
+        <script>scripts\scr_knitting_get_template_points.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_game_over</font>
+    <font>fonts\fnt_game_normal</font>
+  </fonts>
   <objects name="objects">
     <objects name="GameState">
       <object>objects\GameState</object>
@@ -94,6 +119,13 @@
     <objects name="Menus">
       <object>objects\obj_title_menu</object>
     </objects>
+    <objects name="MiniGames">
+      <objects name="Knitting">
+        <object>objects\obj_knitting_needle</object>
+        <object>objects\obj_knitting_yarn</object>
+        <object>objects\obj_knitting_template</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init_game</room>
@@ -101,6 +133,9 @@
     <room>rooms\rm_map_dev</room>
     <room>rooms\rm_map_dev2</room>
     <room>rooms\rm_test</room>
+    <rooms name="MiniGames">
+      <room>rooms\rm_game_knitting</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
