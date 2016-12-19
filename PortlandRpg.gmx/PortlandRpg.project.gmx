@@ -82,6 +82,11 @@
         <script>scripts\gui_window_open.gml</script>
         <script>scripts\gui_window_close.gml</script>
       </scripts>
+      <scripts name="Notifications">
+        <script>scripts\notify_action.gml</script>
+        <script>scripts\st_notify_action_start.gml</script>
+        <script>scripts\st_notify_action_end.gml</script>
+      </scripts>
     </scripts>
     <scripts name="MiniGames">
       <scripts name="Knitting">
@@ -124,6 +129,11 @@
         <object>objects\obj_knitting_needle</object>
         <object>objects\obj_knitting_yarn</object>
         <object>objects\obj_knitting_template</object>
+      </objects>
+    </objects>
+    <objects name="Gui">
+      <objects name="Notifications">
+        <object>objects\obj_notify_action</object>
       </objects>
     </objects>
   </objects>
