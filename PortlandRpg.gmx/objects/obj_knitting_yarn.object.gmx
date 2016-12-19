@@ -56,6 +56,7 @@ _timeout --;
 
 if (_timeout == 0 &amp;&amp; !_on_template) {
     obj_knitting_needle._knit_score -= 1;
+    notify_action(x, y, "- 1");
     image_blend = c_red;
 }
 </string>
